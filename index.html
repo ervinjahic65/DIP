@@ -637,5 +637,16 @@
                 </div>
             </div>
         </footer>
+        <script>
+            document.getElementById("contact_form").addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                document.getElementById("contact_form").innerHTML = '<div style="display: flex; justify-content: center; align-items: center;"><img src="files/loading.gif" style="" width="80"></div>';
+
+                setTimeout(() => {
+                    document.getElementById("contact_form").innerHTML = '<div style="display: flex; justify-content: center; align-items: center;"><p style="font-size: 18px; color:black; font-weight: 700; text-align: center;">Thank you for registering. A representative will contact you shortly.</p></div>';
+                }, 2000);
+                });
+        </script>
     </body>
 </html>
