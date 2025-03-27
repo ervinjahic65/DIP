@@ -651,5 +651,19 @@
                 }, 2000);
                 });
         </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const faqItems = document.querySelectorAll('.faqs_item');
+
+                faqItems.forEach(item => {
+                    const question = item.querySelector('.faq_title');
+                    const answer = item.querySelector('.faqs_desc');
+
+                    question.addEventListener('click', function() {
+                    answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+                    });
+                });
+            });
+        </script>
     </body>
 </html>
